@@ -21,10 +21,7 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
-  "scripts": {
-    "serve": "nodemon server",
-    "start": "nodemon server"
-  },
+  "scripts": {},
   "name": "chat",
   "version": "1.0.0",
   "main": "server.js",
