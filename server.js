@@ -10,7 +10,7 @@ const socketIO = require("socket.io");
 // const session = require("express-session");
 // const SessionStore = require("express-session-sequelize")(session.Store);
 
-const PORT = process.env.CRNT_PORT || 3000;
+const PORT = process.env.CRNT_PORT || 5000;
 var app = express();
 let server = http.createServer(app).listen(PORT, () => {
   console.log("Server in Running on localhost:" + PORT);
@@ -55,7 +55,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 //app.use(session(sessionOptions));
 //app.use(resHeaders);
-app.use(helmet());
+//app.use(helmet());
 
 //Routes
 const UserRoutes = require("./routes/userRoutes");
