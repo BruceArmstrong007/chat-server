@@ -10,11 +10,12 @@ const socketIO = require("socket.io");
 // const session = require("express-session");
 // const SessionStore = require("express-session-sequelize")(session.Store);
 
-const PORT = process.env.CRNT_PORT || 5000;
 var app = express();
-let server = http.createServer(app).listen(PORT, () => {
-  console.log("Server in Running on localhost:" + PORT);
-});
+let server = http
+  .createServer(app)
+  .listen(process.env.CRNT_PORT || 5000, () => {
+    console.log("Server in Running on localhost:" + PORT);
+  });
 
 app.use(cookieParser());
 
