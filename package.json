@@ -16,16 +16,12 @@
     "nodemailer": "^6.7.2",
     "sequelize": "^6.14.1",
     "socket.io": "^4.4.1",
-    "sqlite3": "^5.0.2",
-    "nodemon": "^2.0.15"
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
-  "scripts": {
-    "start": "nodemon server",
-    "serve": "nodemon server"
-  },
+  "scripts": {},
   "name": "chat",
   "version": "1.0.0",
   "main": "server.js",
