@@ -14,7 +14,9 @@ var app = express();
 let server = http
   .createServer(app)
   .listen(process.env.CRNT_PORT || 5000, () => {
-    console.log("Server in Running on localhost:" + PORT);
+    console.log(
+      "Server in Running on localhost:" + (process.env.CRNT_PORT || 5000)
+    );
   });
 
 app.use(cookieParser());
