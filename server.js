@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions));
 //app.use(session(sessionOptions));
-//app.use(resHeaders);
+app.use(resHeaders);
 //app.use(helmet());
 
 //Routes
