@@ -23,7 +23,7 @@ app.use(cookieParser());
 // });
 
 var corsOptions = {
-  orgin: ["http://localhost:4200"],
+  orgin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: [
     "Content-Type",
