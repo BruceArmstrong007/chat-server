@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "express-session-sequelize": "^2.3.0",
+    "helmet": "^5.0.2",
+    "http": "^0.0.1-security",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.2",
+    "sequelize": "^6.14.1",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "serve": "nodemon server",
+    "start": "nodemon server"
+  },
+  "name": "chat",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
