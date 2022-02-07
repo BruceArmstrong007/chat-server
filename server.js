@@ -51,6 +51,8 @@ var corsOptions = {
 //   },
 // };
 
+const resHeaders = require("./middlewares/resHeaders");
+
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
