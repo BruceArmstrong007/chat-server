@@ -1,14 +1,10 @@
 const express = require("express");
 require("dotenv").config();
 const helmet = require("helmet");
-const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const http = require("http");
 const socketIO = require("socket.io");
-
-// const session = require("express-session");
-// const SessionStore = require("express-session-sequelize")(session.Store);
 
 var app = express();
 let server = http
@@ -19,31 +15,11 @@ let server = http
     );
   });
 
-//app.use(cookieParser());
-
-// const sequelizeSessionStore = new SessionStore({
-//   db: sequelizeDB,
-// });
-
 var corsOptions = {
   orgin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "*",
 };
-
-// var sessionOptions = {
-//   secret: process.env.SESSION_SECRET,
-//   key: process.env.SESSION_KEY,
-//   resave: false,
-//   saveUninitialized: true,
-//   store: sequelizeSessionStore,
-//   cookie: {
-//     path: "/",
-//     httpOnly: true,
-//     maxAge: 1000 * 60 * 60 * 24,
-//     sameSite: "none",
-//   },
-// };
 
 const resHeaders = require("./middlewares/resHeaders");
 
@@ -52,8 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions));
-//app.use(session(sessionOptions));
-//app.use(helmet());
+app.use(helmet());
 app.use(resHeaders);
 
 //Routes
@@ -74,6 +49,8 @@ const chatModel = require("./models/chat");
 let io = socketIO(server, {
   cors: {
     origin: "*",
+
+    allowedHeaders: "*",
   },
 });
 
