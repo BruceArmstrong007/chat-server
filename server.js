@@ -54,7 +54,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 //app.use(session(sessionOptions));
 //app.use(helmet());
-pp.use(resHeaders);
+app.use(resHeaders);
 
 //Routes
 const UserRoutes = require("./routes/userRoutes");
