@@ -19,7 +19,7 @@ let server = http
     );
   });
 
-app.use(cookieParser());
+//app.use(cookieParser());
 
 // const sequelizeSessionStore = new SessionStore({
 //   db: sequelizeDB,
@@ -28,13 +28,7 @@ app.use(cookieParser());
 var corsOptions = {
   orgin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: [
-    "Content-Type",
-    "Authorization",
-    "Origin",
-    "Access-Control-Allow-Origin",
-  ],
-  credentials: true,
+  allowedHeaders: "*",
 };
 
 // var sessionOptions = {
@@ -70,8 +64,8 @@ app.use("/user", UserRoutes);
 app.use("/auth", AuthRoutes);
 app.use("/chat", ChatRoutes);
 
-app.get("/", (req, res) => {
-  res.send({ success: true, message: working });
+app.get("/", async (req, res) => {
+  res.status(200).send({ success: true, message: working });
 });
 
 const sequelizeDB = require("./db/sequelize");
