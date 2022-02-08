@@ -59,8 +59,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions));
 //app.use(session(sessionOptions));
+app.use(helmet());
 app.use(resHeaders);
-//app.use(helmet());
 
 //Routes
 const UserRoutes = require("./routes/userRoutes");
@@ -69,6 +69,10 @@ const ChatRoutes = require("./routes/chatRoutes");
 app.use("/user", UserRoutes);
 app.use("/auth", AuthRoutes);
 app.use("/chat", ChatRoutes);
+
+app.get("/", (req, res) => {
+  res.send({ success: true, message: working });
+});
 
 const sequelizeDB = require("./db/sequelize");
 const chatModel = require("./models/chat");
