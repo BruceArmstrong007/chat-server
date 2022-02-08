@@ -45,7 +45,7 @@ var corsOptions = {
 //   },
 // };
 
-//const resHeaders = require("./middlewares/resHeaders");
+const resHeaders = require("./middlewares/resHeaders");
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
@@ -54,7 +54,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 //app.use(session(sessionOptions));
 //app.use(helmet());
-//app.use(resHeaders);
+pp.use(resHeaders);
 
 //Routes
 const UserRoutes = require("./routes/userRoutes");
