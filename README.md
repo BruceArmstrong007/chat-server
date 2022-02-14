@@ -2,16 +2,16 @@
 Server Side Source Code for Chat App
 
 
-## Hosted Web App
-https://chat-ab2aa.web.app/auth/register
+# Hosted Web App
+https://chat-ab2aa.web.app/
 
 
-## Hosted Server
+# Hosted Server
 
 This server is Hosted in glitch.com 
 
 
-## Tech Stack 
+# Tech Stack 
 Node - Back End Run Time
 Express - HTTP Server Library
 Socket.io - Web Socket Server Library
