@@ -7,13 +7,10 @@ const http = require("http");
 const socketIO = require("socket.io");
 
 var app = express();
-let server = http
-  .createServer(app)
-  .listen(process.env.CRNT_PORT || 5000, () => {
-    console.log(
-      "Server in Running on localhost:" + (process.env.CRNT_PORT || 5000)
-    );
-  });
+let PORT = process.env.CRNT_PORT || 3000;
+let server = http.createServer(app).listen(PORT, () => {
+  console.log("Server in Running on localhost:" + PORT);
+});
 
 var corsOptions = {
   orgin: "*",
@@ -40,7 +37,7 @@ app.use("/auth", AuthRoutes);
 app.use("/chat", ChatRoutes);
 
 app.get("/", async (req, res) => {
-  res.status(200).send({ success: true, message: working });
+  return await res.status(200).send({ success: true, message: "working" });
 });
 
 const sequelizeDB = require("./db/sequelize");
