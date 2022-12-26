@@ -31,9 +31,14 @@ dotenv - Process Env Library
 Firbase - github integration
 
 
+#Note 
+ Me trying to create a all round chat app with Auth and socket i.o on node server
+ sqllite3 is used in server itself for storing chats
+ Took around 2 to 4 days to build and deploy
+ Might not be as responsive
 
 
-# Demo
+# Demo - sorry for white background in images
 # Landing Page
 <img width="960" alt="landing-page" src="https://user-images.githubusercontent.com/48177059/209469000-ced31f2e-8fb6-41f9-9eb8-cc1ca9584aab.png">
 
